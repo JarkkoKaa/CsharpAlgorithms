@@ -1,4 +1,5 @@
 ﻿using System;
+using CsharpAlgorithms.DataStructures;
 
 namespace CsharpAlgorithms
 {
@@ -6,7 +7,10 @@ namespace CsharpAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DoublyLinkedList<string> list = new DoublyLinkedList<string>();
+            list.InsertFirst("Tuesday");
+            list.InsertFirst("Monday");
+            list.InsertLast("wednesday");
         }
     }
 }

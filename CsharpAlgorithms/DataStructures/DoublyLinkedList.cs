@@ -4,11 +4,6 @@ using System.Text;
 
 namespace CsharpAlgorithms.DataStructures
 {
-    /* Goals:
-     * Data is string
-     * Add and delete first node
-     * Add and delete last node
-     * */
     class DNode<T>
     {
         public T data;
@@ -30,6 +25,7 @@ namespace CsharpAlgorithms.DataStructures
     class DoublyLinkedList<T>
     {
         private DLinkedList<T> dLinkedList;
+
         public DoublyLinkedList()
         {
             dLinkedList = new DLinkedList<T>();
@@ -38,9 +34,11 @@ namespace CsharpAlgorithms.DataStructures
         // insert first node
         public void InsertFirst(T newData)
         {
-            DNode<T> firstNode = new DNode<T>(newData);
-            firstNode.next = dLinkedList.head;
-            firstNode.prev = null;
+            DNode<T> firstNode = new DNode<T>(newData)
+            {
+                next = dLinkedList.head,
+                prev = null
+            };
 
             if (dLinkedList.head != null)
             {
@@ -75,6 +73,44 @@ namespace CsharpAlgorithms.DataStructures
                 find = find.next;
             }
             return find;
+        }
+
+        public void DisplayAll()
+        {
+            if (dLinkedList.head == null)
+            {
+                Console.WriteLine("List is empty!");
+            }
+            else
+            {
+                DNode<T> current = dLinkedList.head;
+                while(current != null)
+                {
+                    Console.WriteLine(current.data);
+                    current = current.next;
+                }
+            }
+        }
+
+        public void RemoveFirst()
+        {
+            if (dLinkedList.head != null)
+            {
+                DNode<T> newFirst = dLinkedList.head;
+                newFirst = newFirst.next;
+                newFirst.prev = null;
+                dLinkedList.head = newFirst;
+            }
+        }
+
+        public void RemoveLast()
+        {
+            if (dLinkedList.head != null)
+            {
+                DNode<T> newLastNode = FindLastNode(dLinkedList);
+                newLastNode = newLastNode.prev;
+                newLastNode.next = null;
+            }
         }
     }
 }

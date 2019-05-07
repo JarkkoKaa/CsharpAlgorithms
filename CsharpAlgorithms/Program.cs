@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using CsharpAlgorithms.DataStructures;
+using CsharpAlgorithms.Algorithms;
 
 namespace CsharpAlgorithms
 {
@@ -17,9 +19,21 @@ namespace CsharpAlgorithms
             list.DisplayAll();
         }
 
+        static void BubbleSort()
+        {
+            int[] numbers = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
+            BubbleSort<int> bsort = new BubbleSort<int>();
+            bsort.Sort(numbers);
+            foreach (int num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+        }
+
         static void Main(string[] args)
         {
-            LinkedList();
+            // LinkedList();
+            BubbleSort();
         }
     }
 }

@@ -32,8 +32,11 @@ namespace CsharpAlgorithms
         static void Main(string[] args)
         {
             int[] numbers = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
+            // int[] numbers = new int[] { 2, 4, 1, 3, 5, 7, 8 };
             // LinkedList();
             // BubbleSort(numbers);
+            MergeSort<int> mergeSort = new MergeSort<int>();
+            var sorted = mergeSort.Sort(numbers);
         }
     }
 }

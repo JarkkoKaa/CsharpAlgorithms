@@ -10,9 +10,9 @@ namespace CsharpAlgorithms.Algorithms
         {
             var comparer = Comparer<T>.Default;
 
-            for(int i = 0; i <= array.Length - 2; i++)
+            for(int i = 0; i < array.Length - 1; i++)
             {
-                for(int j = 0; j <= array.Length - 2; j++)
+                for(int j = 0; j < array.Length - i -1 ; j++)
                 {
                     if (comparer.Compare(array[j], array[j + 1]) > 0)
                     {

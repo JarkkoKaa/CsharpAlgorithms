@@ -19,9 +19,8 @@ namespace CsharpAlgorithms
             list.DisplayAll();
         }
 
-        static void BubbleSort()
-        {
-            int[] numbers = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
+        static void BubbleSort(int[] numbers)
+        { 
             BubbleSort<int> bsort = new BubbleSort<int>();
             bsort.Sort(numbers);
             foreach (int num in numbers)
@@ -32,8 +31,9 @@ namespace CsharpAlgorithms
 
         static void Main(string[] args)
         {
+            int[] numbers = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
             // LinkedList();
-            BubbleSort();
+            // BubbleSort(numbers);
         }
     }
 }

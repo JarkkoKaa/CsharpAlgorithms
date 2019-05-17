@@ -44,11 +44,11 @@ namespace CsharpAlgorithms
         static void Main(string[] args)
         {
             //int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
-            char[] values = new char[] { 'c', 'd', 'b', 'a' };
+            int[] values = new int[] { 'c', 'd', 'b', 'a' };
             // LinkedList();
             // BubbleSort(values);
             // MergeSort(values);
-            QuickSort(values);
+            // QuickSort(values);
         }
     }
 }

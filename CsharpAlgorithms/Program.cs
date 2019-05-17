@@ -45,13 +45,10 @@ namespace CsharpAlgorithms
         {
             //int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
             int[] values = new int[] { 'c', 'd', 'b', 'a' };
-            int value = 1;
             // LinkedList();
             // BubbleSort(values);
             // MergeSort(values);
             // QuickSort(values);
-            AVLTree<int> aVLTree = new AVLTree<int>();
-            aVLTree.Insert(value);
         }
     }
 }

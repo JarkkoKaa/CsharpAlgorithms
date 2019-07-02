@@ -70,5 +70,39 @@ namespace CsharpAlgorithms.DataStructures
                 }
             }
         }
+
+        /// <summary>
+        /// Return all data as a List
+        /// </summary>
+        /// <returns></returns>
+        public List<T> GetAll()
+        {
+            List<T> list = new List<T>();
+            
+            if (sLinkedList.head != null)
+            {
+                SNode<T> current = sLinkedList.head;
+                while (current != null)
+                {
+                    list.Add(current.data);
+                    current = current.next;
+                }
+            }
+
+            return list;
+        }
+
+        public void ClearAll()
+        {
+            if (sLinkedList.head != null)
+            {   
+                while (sLinkedList.head != null)
+                {
+                    SNode<T> firstNode = sLinkedList.head;
+                    sLinkedList.head = firstNode.next;
+                    firstNode = null;  
+                }
+            }
+        }
     }
 }

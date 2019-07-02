@@ -13,6 +13,12 @@ namespace CsharpAlgorithms
             list.Insert("Monday");
             list.Insert("Tuesday");
             list.DisplayAll();
+            var items = list.GetAll();
+            // list.ClearAll();
+            list.RemoveFirst();
+            list.Insert("Wednesday");
+            list.Insert("Thursday");
+            list.RemoveLast();
         }
 
         static void DLinkedList()
@@ -23,6 +29,7 @@ namespace CsharpAlgorithms
             list.InsertFirst("Monday");
             list.InsertLast("wednesday");
             Console.WriteLine(list.FindIndex(1));
+            var items = list.GetAll();
             list.ClearAll();  
             //list.RemoveLast();
             //list.RemoveFirst();
@@ -59,7 +66,7 @@ namespace CsharpAlgorithms
             // BubbleSort(values);
             // MergeSort(values);
             // QuickSort(values);
-            SLinkedList();
+            // SLinkedList();
         }
     }
 }

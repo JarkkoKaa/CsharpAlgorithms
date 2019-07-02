@@ -117,6 +117,27 @@ namespace CsharpAlgorithms.DataStructures
             }
         }
 
+        /// <summary>
+        /// Return all data as a List
+        /// </summary>
+        /// <returns></returns>
+        public List<T> GetAll()
+        {
+            List<T> list = new List<T>();
+
+            if (dLinkedList.head != null)
+            {
+                DNode<T> current = dLinkedList.head;
+                while (current != null)
+                {
+                    list.Add(current.data);
+                    current = current.next;
+                }
+            }
+
+            return list;
+        }
+    
         public void RemoveFirst()
         {
             if (dLinkedList.head != null)

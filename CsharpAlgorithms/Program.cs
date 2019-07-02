@@ -14,7 +14,8 @@ namespace CsharpAlgorithms
             list.InsertFirst("Tuesday");
             list.InsertFirst("Monday");
             list.InsertLast("wednesday");
-            list.ClearAll();
+            Console.WriteLine(list.FindIndex(1));
+            list.ClearAll();  
             //list.RemoveLast();
             //list.RemoveFirst();
             list.DisplayAll();

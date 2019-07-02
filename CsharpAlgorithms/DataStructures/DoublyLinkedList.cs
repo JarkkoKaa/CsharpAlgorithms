@@ -65,7 +65,30 @@ namespace CsharpAlgorithms.DataStructures
             }
         }
 
-        public DNode<T> FindLastNode(DLinkedList<T> dLinkedList)
+        /// <summary>
+        /// Return data from index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public T FindIndex(int index)
+        {
+            DNode<T> find = dLinkedList.head;
+            if (find != null)
+            {
+                int count = 0;
+                while (find.next != null)
+                {
+                    if (index == count)
+                        break;
+                    find = find.next;
+                    count++;
+                }
+            }
+            
+            return find.data;
+        }
+
+        private DNode<T> FindLastNode(DLinkedList<T> dLinkedList)
         {
             DNode<T> find = dLinkedList.head;
             while(find.next != null)
@@ -110,6 +133,19 @@ namespace CsharpAlgorithms.DataStructures
                 DNode<T> newLastNode = FindLastNode(dLinkedList);
                 newLastNode = newLastNode.prev;
                 newLastNode.next = null;
+            }
+        }
+
+        public void ClearAll()
+        {
+            if (dLinkedList.head != null)
+            {
+                while (dLinkedList.head != null)
+                {
+                    DNode<T> current = dLinkedList.head;
+                    dLinkedList.head = current.next;
+                    current = null;
+                }
             }
         }
     }

@@ -104,5 +104,24 @@ namespace CsharpAlgorithms.DataStructures
                 }
             }
         }
+
+        public void RemoveFirst()
+        {
+            if (sLinkedList.head != null)
+            {
+                SNode<T> firstNode = sLinkedList.head;
+                sLinkedList.head = firstNode.next;
+                firstNode = null;
+            }
+        }
+
+        public void RemoveLast()
+        {
+            if (sLinkedList.head != null)
+            {
+                SNode<T> lastNode = FindLast(sLinkedList);
+                lastNode = null;
+            }
+        }
     }
 }

@@ -14,7 +14,11 @@ namespace CsharpAlgorithms
             list.Insert("Tuesday");
             list.DisplayAll();
             var items = list.GetAll();
-            list.ClearAll();
+            // list.ClearAll();
+            list.RemoveFirst();
+            list.Insert("Wednesday");
+            list.Insert("Thursday");
+            list.RemoveLast();
         }
 
         static void DLinkedList()
@@ -58,7 +62,7 @@ namespace CsharpAlgorithms
         {
             // int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
             // int[] values = new int[] { 'c', 'd', 'b', 'a' };
-             DLinkedList();
+            // DLinkedList();
             // BubbleSort(values);
             // MergeSort(values);
             // QuickSort(values);

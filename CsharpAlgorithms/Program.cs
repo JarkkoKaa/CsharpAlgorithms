@@ -14,8 +14,9 @@ namespace CsharpAlgorithms
             list.InsertFirst("Tuesday");
             list.InsertFirst("Monday");
             list.InsertLast("wednesday");
-            list.RemoveLast();
-            list.RemoveFirst();
+            list.ClearAll();
+            //list.RemoveLast();
+            //list.RemoveFirst();
             list.DisplayAll();
         }
 
@@ -44,8 +45,8 @@ namespace CsharpAlgorithms
         static void Main(string[] args)
         {
             //int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
-            int[] values = new int[] { 'c', 'd', 'b', 'a' };
-            // LinkedList();
+            //int[] values = new int[] { 'c', 'd', 'b', 'a' };
+            LinkedList();
             // BubbleSort(values);
             // MergeSort(values);
             // QuickSort(values);

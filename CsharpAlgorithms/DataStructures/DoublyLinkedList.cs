@@ -97,7 +97,9 @@ namespace CsharpAlgorithms.DataStructures
             }
             return find;
         }
-
+        /// <summary>
+        /// Console output
+        /// </summary>
         public void DisplayAll()
         {
             if (dLinkedList.head == null)

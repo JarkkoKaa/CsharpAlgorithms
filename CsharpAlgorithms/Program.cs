@@ -7,7 +7,15 @@ namespace CsharpAlgorithms
 {
     class Program
     {
-        static void LinkedList()
+        static void SLinkedList()
+        {
+            SinglyLinkedList<string> list = new SinglyLinkedList<string>();
+            list.Insert("Monday");
+            list.Insert("Tuesday");
+            list.DisplayAll();
+        }
+
+        static void DLinkedList()
         {
             DoublyLinkedList<string> list = new DoublyLinkedList<string>();
             list.RemoveLast();
@@ -45,12 +53,13 @@ namespace CsharpAlgorithms
 
         static void Main(string[] args)
         {
-            //int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
-            //int[] values = new int[] { 'c', 'd', 'b', 'a' };
-            LinkedList();
+            // int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
+            // int[] values = new int[] { 'c', 'd', 'b', 'a' };
+            // DLinkedList();
             // BubbleSort(values);
             // MergeSort(values);
             // QuickSort(values);
+            SLinkedList();
         }
     }
 }

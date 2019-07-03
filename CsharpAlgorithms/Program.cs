@@ -52,21 +52,28 @@ namespace CsharpAlgorithms
             }
         }
 
-        static void QuickSort(char[] values)
+        static int[] QuickSort(int[] values)
         {
-            QuickSort<char> quickSort = new QuickSort<char>();
-            var sorted = quickSort.Sort(values, 0, values.Length - 1);
+            QuickSort<int> quickSort = new QuickSort<int>();
+            return quickSort.Sort(values, 0, values.Length - 1);
         }
 
+        static int BinarySearch(int[] values)
+        {
+            QuickSort(values);
+            BinarySearch<int> search = new BinarySearch<int>();
+            return search.BSearch(values, 4);
+        }
         static void Main(string[] args)
         {
-            // int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
+             int[] values = new int[] { 9, 4, 6, 7, 8, 3, 2, 1, 5 };
             // int[] values = new int[] { 'c', 'd', 'b', 'a' };
             // DLinkedList();
             // BubbleSort(values);
             // MergeSort(values);
             // QuickSort(values);
             // SLinkedList();
+            int index = BinarySearch(values);
         }
     }
 }

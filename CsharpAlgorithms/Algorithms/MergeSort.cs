@@ -41,7 +41,7 @@ namespace CsharpAlgorithms.Algorithms
             return result;
         }
 
-        public T[] Merge(T[] left, T[] right)
+        private T[] Merge(T[] left, T[] right)
         {
             int length = left.Length + right.Length;
             int indexLeft = 0;

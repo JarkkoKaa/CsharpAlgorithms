@@ -21,7 +21,7 @@ namespace CsharpAlgorithms.Algorithms
             return list;
         }
 
-        public int Partition(T[] list, int left, int right)
+        private int Partition(T[] list, int left, int right)
         {
             T pivot = list[left];
             Comparer<T> comparer = Comparer<T>.Default;

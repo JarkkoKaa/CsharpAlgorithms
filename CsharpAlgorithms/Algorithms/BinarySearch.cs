@@ -12,7 +12,7 @@ namespace CsharpAlgorithms.Algorithms
         /// <param name="array"></param>
         /// <param name="value"></param>
         /// <returns></returns>
-        public int BSearch(T[] array,T value)
+        public int Search(T[] array,T value)
         {
             int lowerBound = 0;
             int higherBound = array.Length;

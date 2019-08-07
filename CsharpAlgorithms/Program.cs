@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CsharpAlgorithms.DataStructures;
 using CsharpAlgorithms.Algorithms;
-using CsharpAlgorithms.Encryptions;
+using CsharpAlgorithms.Misc;
 
 namespace CsharpAlgorithms
 {

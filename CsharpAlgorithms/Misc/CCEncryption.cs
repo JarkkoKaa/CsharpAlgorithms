@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace CsharpAlgorithms.Encryptions
+namespace CsharpAlgorithms.Misc
 {
     /// <summary>
     /// Encrypt: key for shifts

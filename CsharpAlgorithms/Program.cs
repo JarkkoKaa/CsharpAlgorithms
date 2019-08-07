@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using CsharpAlgorithms.DataStructures;
 using CsharpAlgorithms.Algorithms;
-using CsharpAlgorithms.Encryptions.CaesarCipher;
+using CsharpAlgorithms.Encryptions;
 
 namespace CsharpAlgorithms
 {
@@ -83,7 +83,10 @@ namespace CsharpAlgorithms
             // SLinkedList();
             //int index = BinarySearch(values);
             // var sorted = HeapSort(values);
-            new CCEncryption().Encryption("moi", 1);
+            // TODO: Caesar Cipher encryption
+            int key = 3;
+            var text = new CCEncryption().Encryption("abcxyz", key);
+            var encrypted = new CCEncryption().Encryption(text, 26 - key);
         }
     }
 }

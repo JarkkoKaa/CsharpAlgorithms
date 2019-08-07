@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using CsharpAlgorithms.DataStructures;
 using CsharpAlgorithms.Algorithms;
+using CsharpAlgorithms.Misc;
 
 namespace CsharpAlgorithms
 {
@@ -73,7 +74,7 @@ namespace CsharpAlgorithms
         }
         static void Main(string[] args)
         {
-            int[] values = new int[] { 4, 3, 1, 2, 5 };
+            // int[] values = new int[] { 4, 3, 1, 2, 5 };
             // int[] values = new int[] { 'c', 'd', 'b', 'a' };
             // DLinkedList();
             // BubbleSort(values);
@@ -81,7 +82,11 @@ namespace CsharpAlgorithms
             // QuickSort(values);
             // SLinkedList();
             //int index = BinarySearch(values);
-            var sorted = HeapSort(values);
+            // var sorted = HeapSort(values);
+            // TODO: Caesar Cipher encryption
+            int key = 3;
+            var text = new CCEncryption().Encryption("abcxyz", key);
+            var encrypted = new CCEncryption().Encryption(text, 26 - key);
         }
     }
 }
